@@ -2,6 +2,12 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-</div>
+@model SearchViewModel;
+
+<form method="post" asp-action="Search" asp-controller="Search">
+    <input asp-for="Rooftop" placeholder="Rooftop" />
+    <input asp-for="Country" placeholder="Country" />
+    <button type="submit">Search</button>
+</form>
+
+
